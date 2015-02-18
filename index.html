@@ -1,28 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-  <meta charset="UTF-8">
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'/>
-  <link rel='stylesheet' href='style.css'/>
-  <script type='text/template' id='pstTmpl'>
+  <meta charset='UTF-8'>
+  <title>Movie Application</title>
+  <link rel='stylesheet' href='style.css'>
+  <link rel='stylesheet' href='bower_components/font-awesome/css/font-awesome.css'/>
+  <script type='text/template' id='movieTmpl'>
 
-      <h2><%= title %></h2>
-      <p><%= content %></p>
 
+      <h2 class='movieListing title'><%= title %></h2>
+      <img class='movieListing imageURL' src=<%= imageURL %>>
+      <p class='movieListing releaseDate'><%= releaseDate %></p>
+      <p class='movieListing synopsis'><%= synopsis %></p>
+      <form action='' class='editMovieForm'>
+        <p><input type='text' name='updateTitle' placeholder='Title'></p>
+        <p><input type='text' name='updateImage' placeholder='Image'></p>
+        <p><input type='text' name='updateReleaseDate' placeholder='Release Date'></p>
+        <p><textarea name='updateSynopsis' id='' cols='30' rows='10' placeholder='Synopsis'></textarea></p>
+        <p><button type='submit'>Update Movie Listing</button></p>
+      </form>
+      <button class='fa fa-times'>Delete</button>
+      <button class="fa fa-pencil-square-o">Edit</button>
+
+
+  </script>
+  <script type='text/template' id='addMovieTmpl'>
+    <button class='toggleAddMovie'>Add New Movie Listing</button>
+    <form action='' id='addMovieForm'>
+      <p><input type='text' name='newTitle' placeholder='Title'></p>
+      <p><input type='text' name='newImage' placeholder='Image'></p>
+      <p><input type='text' name='newReleaseDate' placeholder='Release Date'></p>
+      <p><textarea name='newSynopsis' id='' cols='30' rows='10' placeholder='Synopsis'></textarea></p>
+      <p><button type='submit'>Submit New Movie Listing</button></p>
+    </form>
   </script>
 </head>
 <body>
   <section>
-    <h1>this is is where movie listings go</h1>
+
 
 
   </section>
-  <script src="bower_components/underscore/underscore.js"></script>
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/backbone/backbone.js"></script>
-  <script src="models.js"></script>
-  <script src="collections.js"></script>
-  <script src="views.js"></script>
-  <script src="main.js"></script>
+
+  <script src='bower_components/underscore/underscore.js'></script>
+  <script src='bower_components/jquery/dist/jquery.js'></script>
+  <script src='bower_components/backbone/backbone.js'></script>
+
+  <script src='models.js'></script>
+  <script src='collections.js'></script>
+  <script src='views.js'></script>
+  <script src='main.js'></script>
 </body>
 </html>
