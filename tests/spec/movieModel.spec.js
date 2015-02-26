@@ -20,7 +20,6 @@ describe("Movie Model", function () {
   it("should save my model when i call save", function () {
     this.movieModel.set({director: 'this is not a real director'});
     this.movieModel.save();
-
     expect(this.movieStub).to.have.been.calledOnce;
     this.movieModel.set({title: 'this is not a real title'});
     this.movieModel.save();
