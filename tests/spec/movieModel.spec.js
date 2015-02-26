@@ -3,7 +3,7 @@
 describe("Movie Model", function () {
   beforeEach(function () {
     this.movieModel = new MovieModel();
-    this.MovieStub = sinon.stub(this.movieModel, 'save');
+    this.movieStub = sinon.stub(this.movieModel, 'save');
   });
   it("should be an instance of MovieModel Class", function () {
     expect(this.movieModel).is.instanceof(MovieModel);
